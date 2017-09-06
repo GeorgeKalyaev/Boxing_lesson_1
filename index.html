@@ -1,55 +1,108 @@
 <!doctype html>
-<html>
+<html lang="ru">
 
-<head lang="ru">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <title>boxing.com</title>
     <link href="qwerty.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 </head>
 <body>
 
- <div class="wrapper">
+<div class="dop-obot">
+<div class="head-one wrapper">
 
-
-    <div class="head-one">
-                <a href="#" class="logo-icons"><img src="images/signin.png" alt="">Вход</a>
-                <a href="#" class="logo-icons"><img src="images/heart.png" alt="">Избранное</a>
-                <a href="#" class="logo-icons"><img src="images/signin.png" alt="">Сравнение</a>
-                <nav class="nav">
-                <a href="#" class="nav-itm"><img src="images/vk.png" alt=""></a>
-                <a href="#" class="nav-itm"><img src="images/facebook.png" alt=""></a>
-                <a href="#" class="nav-itm"><img src="images/twitter_sign.png" alt=""></a>
-            </nav>
+    <div class="head-left">
+        <a href="#" class="left-link-item">
+            <svg class="ico-svg" width="64" height="64" >
+                <use xlink:href="images/svg/signin.svg#iconsignin"></use>
+            </svg>
+            <span class="ico">Выход</span>
+        </a>
+        <a href="#" class="left-link-item">
+            <svg class="ico-svg" width="64" height="64" >
+                <use xlink:href="images/svg/heart.svg#heartsvg"></use>
+            </svg>
+            <span class="ico">Избранное</span>
+        </a>
+        <a href="#" class="left-link-item">
+            <svg class="ico-svg" width="64" height="64" >
+                <use xlink:href="images/svg/compare.svg#comparesvg"></use>
+            </svg>
+            <span class="ico">Сравнение</span>
+        </a>
+    </div>
+    <div class="head-right">
+        <a href="#" class="social-link">
+            <svg class="ico-svg" width="69" height="64" >
+                <use xlink:href="images/svg/vk.svg#vk-svg"></use>
+            </svg>
+        </a>
+        <a href="#" class="social-link">
+            <svg class="ico-svg" width="37" height="64" >
+                <use xlink:href="images/svg/facebook.svg#facebook-svg"></use>
+            </svg>
+        </a>
+        <a href="#" class="social-link">
+            <svg class="ico-svg" width="64" height="64" >
+                <use xlink:href="images/svg/twitter.svg#twitter-svg"></use>
+            </svg>
+        </a>
     </div>
 
-     <div class="head-two">
+
+
+
+</div>
+
+</div>
+
+
+
+     <div class="head-two wrapper">
         <div class="logo-page">
             <a href="#"><img src="images/svg/003-boxing-gloves.svg" alt=""></a>
             <div class="info-logo">
                 <h5 class="big-name">boxing.com</h5>
-                <p class="">buy and win</p>
+                <p class="small-info-buy">buy and win</p>
             </div>
         </div>
         <div class="search-page">
             <div class="info">
-                <span>8(800)800-80-80</span>
-                <span>boxing.com</span>
+                <svg class="ico-svg-info" width="64" height="64" >
+                    <use xlink:href="images/svg/phone.svg#phone-svg"></use>
+                </svg>
+                <a class="phone-box" href="tel:+79999999">8(800)800-80-80</a>
+                <svg class="ico-svg-info" width="64" height="64" >
+                    <use xlink:href="images/svg/envelope.svg#envelope-svg"></use>
+                </svg>
+                <a class="mail-box" href="mailto:info@boxing.com">boxing.com</a>
                 <div class="wrap-search-form">
                     <form action="#" class="search-form">
-                        <input type="search" class="search" placeholder=" поиск поиск "/>
-                        <input type="submit" class="submit-btn" value="Найти"/>
+                        <input type="search" class="search" placeholder="Введите поисковую фразу"/>
+                        <input type="submit" class="submit-btn" name="btn" value="" />
                     </form>
                 </div>
             </div>
         </div>
         <div class="basket-page">
-            <p class="basket-price">7 500 р.</p>
-            <a href="#"><img src="images/svg/003-boxing-gloves.svg" alt=""></a>
+            <a class="basket-box-buy" href="#">
+                <p class="basket-price">7 500 р.</p>
+                <svg class="basket-svg-buy" width="64" height="64" >
+                    <use xlink:href="images/svg/shopping_cart.svg#buy-box-many"></use>
+                </svg>
+            </a>
+            <div class="buy-black-top">2</div>
         </div>
      </div>
-     <div class="head-three">
+<div class="head-three-stroke">
+     <div class="head-three wrapper">
         <ul>
             <li><a href="#">Главная</a></li>
             <li><a href="#">Каталог</a></li>
@@ -58,9 +111,9 @@
             <li><a href="#">Контакты</a></li>
         </ul>
      </div>
+</div>
 
-
-    <div class="head-four">
+    <div class="head-four wrapper">
         <div class="aside">
             <div class="category">Категории</div>
             <div class="category-item">
@@ -88,18 +141,27 @@
             <div class="proposal">
                 <div class="sale">
                     <div class="sale-div">
+                        <svg class="three-svg-discounts" width="64" height="64" >
+                            <use xlink:href="images/svg/credit_card.svg#credit-card-svg"></use>
+                        </svg>
                         <a href="#"><span class="sale-one">Продажа</span></a>
                         <p>Широкий ассортимент моделей</p>
                     </div>
                 </div>
                 <div class="discounts">
                     <div class="discounts-div">
+                        <svg class="thumbs_up_alt-svg-discounts" width="64" height="64" >
+                            <use xlink:href="images/svg/thumbs_up_alt.svg#thumbs_up_alt-svg"></use>
+                        </svg>
                         <a href="#"><span class="discounts-one">Скидки</span></a>
                         <p>Невообразимо низкие цены</p>
                     </div>
                 </div>
                 <div class="stock">
                     <div class="stock-div">
+                        <svg class="gift-svg-discounts" width="64" height="64" >
+                            <use xlink:href="images/svg/gift.svg#gift-svg"></use>
+                        </svg>
                         <a href="#"><span class="stock-one">Акция</span></a>
                         <p>Широкий ассортимент моделей</p>
                     </div>
@@ -117,6 +179,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -131,6 +196,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -145,6 +213,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -159,6 +230,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -183,6 +257,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -197,6 +274,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -211,6 +291,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -225,6 +308,9 @@
                             <span class="price-products">35 000 р.</span>
                             <div class="class-btn">
                                 <div class="btn-basket">
+                                    <svg class="basket-shoppingwhite-buy" width="64" height="64" >
+                                        <use xlink:href="images/svg/shoppingwhite.svg#shoppingwhite-svg"></use>
+                                    </svg>
                                     <a href="#">в корзину</a>
                                 </div>
                                 <div class="energy-btn">
@@ -242,7 +328,9 @@
 
     </div>
 
-<footer class="footer">
+
+<div class="stroke-footer">
+<footer class="footer wrapper">
     <div class="copy-logo">
         <div class="logo-page">
             <a href="#"><img src="images/svg/003-boxing-gloves.svg" alt=""></a>
@@ -252,7 +340,7 @@
             </div>
         </div>
     </div>
-    <div class="info-menu one">
+    <div class="info-menu">
         <div class="footer-info">
             <div class="footer-category">Меню</div>
             <div class="footer-category-item">
@@ -285,8 +373,8 @@
             <div class="footer-category">Контактная информация</div>
             <div class="footer-category-item">
                 <ul>
-                    <li class="my-phone"><a href="#">Телефон: 8(499)654-98-79</a></li>
-                    <li class="my-email"><a href="#">E-mail:info@boxing.com</a></li>
+                    <li class="my-phone"><a href="tel:+79999999">Телефон: 8(499)654-98-79</a></li>
+                    <li class="my-email"><a href="mailto:info@boxing.com">E-mail:info@boxing.com</a></li>
                     <li class="my-address"><a href="#">Адрес: г.Москва ул.9 Мая д.9</a></li>
                 </ul>
             </div>
@@ -294,8 +382,10 @@
         </div>
     </div>
 </footer>
+</div>
+
 <div class="copyright">
-    <span class="my-copyright">@BOXIN.COM 2017</span>  <!-- тег копирайта не помню как пишется может <copy> -->
+    <small class="my-copyright">@BOXING.COM 2017</small>
 </div>
 
 
@@ -351,6 +441,7 @@
 
 
 
- </div>
+<script src="slick/slick.min.js"></script>
+<script src="slick/slick/js.js"></script>
 </body>
 </html>

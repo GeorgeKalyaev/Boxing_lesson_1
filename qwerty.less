@@ -96,54 +96,59 @@ section {
  // border: 1px solid black;
   margin: 0 auto;
 
-  max-width: 1200px;
+  max-width: 1240px;
 }
 .body{
   display: flex;
 }
-
-.head-one{
-  border: 1px solid black;
+.ico-svg{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: #666666;
+}
+.dop-obot{
   background-color: #f4f4f4;
-  min-height: 25px;
+}
+.head-one{
+  min-height: 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  .logo-icons{
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 15px;
-    text-decoration: none;
-    img{
-      width: 15px;
-      height:15px;
-
+  align-items: center;
+  .head-left{
+    .left-link-item{
+      margin-right:50px;
     }
   }
-  .nav{
-    display: flex;
-    margin-left: auto;
-    .nav-itm{
-      text-decoration: none;
-      margin: 0 0 0 15px;
-      display: flex;
-
-      img{
-        width: 15px;
-        height: 15px;
-      }
+  .head-left a{
+    color: #8c8c8c;
+    font-size:14px;
+    text-decoration: none;
+  }
+  .head-right{
+    .social-link{
+      margin-left:40px;
     }
   }
 }
 
+
+
+
+
+
+
 .head-two{
   display: flex;
   justify-content: space-between;
+  margin-top:30px;
+  flex-wrap: wrap;
+  align-items: center;
   .logo-page{
     min-width: 250px;
-
     display: flex;
     align-items: center;
-    border: 1px solid black;
     justify-content: center;
     img{
       width: 100px;
@@ -152,44 +157,115 @@ section {
     .info-logo{
       display: flex;
       flex-direction: column;
-      border: 1px solid black;
       margin-left:10px;
       .big-name{
         text-transform: uppercase;
+        color: #666666;
       }
-
+      .small-info-buy{
+        color: #666666;
+        font-weight:bold;
+      }
     }
   }
   .search-page{
     display: flex;
     min-width: 200px;
-    align-items: center;
-    border: 1px solid black;
+    .info{
+      .wrap-search-form{
+        .search-form{
+          border: 1px solid #eee;
+          font-size: 0;
+
+          display: flex;
+          height: 45px;
+          width: 610px;
+          margin-top: 10px;
+          .search{
+            outline: none;
+            color: #666;
+            padding-left: 20px;
+            flex: 1 0 80%;
+            border: none;
+            font-size: 20px;
+          }
+          .submit-btn{
+            outline: none;
+            border: none;
+            width: 85px;
+            height:45px;
+            cursor: pointer;
+            flex: 1 0 20%;
+            background: #f4f4f4 url(images/svg/ser.svg) no-repeat center;
+          }
+        }
+      }
+      .ico-svg-info{
+        width: 20px;
+        height: 20px;
+        fill: #7a252b;
+        vertical-align: middle;
+      }
+      .phone-box{
+        text-decoration: none;
+        color: #666666;
+      }
+      .mail-box{
+        text-decoration: none;
+        color: #666666;
+        font-weight: bold;
+      }
+    }
 
   }
   .basket-page{
+    position: relative;
     display: flex;
-    border: 1px solid black;
-    min-width: 250px;
-
+    min-width: 210px;
     justify-content: center;
     align-items: center;
-    img{
-      width: 60px;
-      height: 60px;
-      border-left: 1px solid black;
-      margin: 0 0 0 15px;
+    height: 75px;
+    border: 1px solid #cecece;
+    .basket-box-buy{
+      display: flex;
+      text-decoration: none;
+      .basket-svg-buy{
+        width: 80px;
+        height: 40px;
+        vertical-align: middle;
+        fill: #7a252b;
+      }
     }
     .basket-price{
-      font-size:20px;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666666;
+      font-size: 20px;
+      border-right: 1px solid #cecece;
+      padding: 0px 15px 0px 5px;
+    }
+    .buy-black-top{
+      content: "2";
+      position: absolute;
+      top: -14%;
+      right: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: #000;
+      color: #fff;
     }
   }
 }
-
+.head-three-stroke{
+  background: #7a252b;
+}
 .head-three{
   display: flex;
-  background: #7a252b;
   min-height: 45px;
   align-items: center;
   font-size:20px;
@@ -203,6 +279,12 @@ section {
   a{
     text-decoration: none;
     color: white;
+  }
+  a:hover{
+
+    border-bottom: 2px solid white;
+
+    //border-bottom: 3px solid white;
   }
 }
 
@@ -242,7 +324,11 @@ section {
           text-decoration: none;
           margin-left: 10px;
           color: #4a4a4a;
+
         }
+      }
+      li:hover{
+        background: #9d9d9d;
       }
       .shorts:before{
         content: url("images/svg/001-boxing-shorts.svg");
@@ -290,8 +376,12 @@ section {
       img{
         width: 100%;
       }
+      img:hover{
+        opacity: 0.8;
+      }
       .baner-one{
         position: relative;
+        margin-top: 5px;
         .lock-1{
           position: absolute;
           border: 1px solid red;
@@ -346,6 +436,7 @@ section {
     .slider{
       min-width: 80%;
       min-height: 350px;
+      margin-left:10px;
       background: rgba(0, 0, 0, 0.3);
       border: 1px solid black;
     }
@@ -353,6 +444,7 @@ section {
       display: flex;
       justify-content: space-between;
       margin-top:30px;
+      margin-left:10px;
       .sale{
         min-width: 32%;
         display: flex;
@@ -366,14 +458,13 @@ section {
             font-size: 30px;
             color: #7a252b;
             font-weight:bold;
-            margin-left:10px;
+            margin-left:5px;
           }
         }
-        .sale-div a:before{
-          content: url("images/svg/boxing-shoes.png");
-          width: 20px;
-          flex-shrink: 0;
-        }
+      }
+      .sale:hover{
+        //background: #e04e54;
+        box-shadow: 0 0 10px 5px rgba(122, 37, 43, 0.5);
       }
       .discounts{
         min-width: 32%;
@@ -388,14 +479,12 @@ section {
             font-size: 30px;
             color: #e4723f;
             font-weight:bold;
-            margin-left:10px;
+            margin-left:5px;
           }
         }
-        .discounts-div a:before{
-          content: url("images/svg/boxing-shoes.png");
-          width: 20px;
-          flex-shrink: 0;
-        }
+      }
+      .discounts:hover{
+        box-shadow: 0 0 10px 5px rgba(228, 114, 63, 0.5);
       }
       .stock{
         min-width: 32%;
@@ -410,14 +499,12 @@ section {
             font-size: 30px;
             color: #84e08f;
             font-weight:bold;
-            margin-left:10px;
+            margin-left:5px;
           }
         }
-        .stock-div a:before{
-          content: url("images/svg/boxing-shoes.png");
-          width: 20px;
-          flex-shrink: 0;
-        }
+      }
+      .stock:hover{
+        box-shadow: 0 0 10px 5px rgba(132, 224, 143, 0.5);
       }
     }
    .proposal a{
@@ -428,11 +515,13 @@ section {
       font-weight:bold;
     }
   }
+
   .sporting-goods{
     margin-top:45px;
     .dop-div {
       .news {
         border-bottom: 1px solid #cecece;
+        margin-left:10px;
         .news-item {
           font-size: 22px;
           color: #666666;
@@ -444,15 +533,17 @@ section {
         display: flex;
         justify-content: space-between;
         margin-top:20px;
+
         .amount-products__product{
           border: 1px solid #cecece;
-          min-width: 22%;
-          height: 348px;
+         min-width: 22%;
           display: flex;
+       margin-left:10px;
           flex-direction: column;
           justify-content: center;
           padding: 5px;
           box-sizing: border-box;
+
           .name-products{
             display: flex;
             text-transform: uppercase;
@@ -480,6 +571,15 @@ section {
               display: flex;
               justify-content: center;
               align-items: center;
+              .basket-shoppingwhite-buy{
+                width: 20px;
+                height: 20px;
+                fill: white;
+                margin-right:10px;
+              }
+            }
+            .btn-basket:hover{
+
             }
             .btn-basket a{
               color: white;
@@ -488,9 +588,7 @@ section {
               text-decoration: none;
               font-size:18px;
             }
-            .btn-basket a:before{
-              // корзина вставить
-            }
+
             .energy-btn{
               margin-left:2px;
               background: #7a252b;
@@ -507,9 +605,16 @@ section {
             }
           }
         }
+        .amount-products__product:hover{
+          box-shadow:
+                    -15px -15px 2px -5px rgba(160,82,45,.5),
+                  -15px 15px 2px -5px rgba(0,255,255,.5),
+                    15px -15px 2px -5px rgba(255,0,0,.5),
+                  15px 15px 2px -5px rgba(255,255,0,.5);
+        }
         .amount-products__product img{
           max-width: 100%;
-          margin-top:20px;
+          margin-top:28px;
         }
         .amount-products__product{
           position: relative;
@@ -549,6 +654,7 @@ section {
     }
     .goods-with-scideas{
       margin-top:20px;
+      margin-left:10px;
       border-bottom: 1px solid #cecece;
       .goods-with-scideas__item{
         font-size: 22px;
@@ -559,21 +665,22 @@ section {
     }
   }
 }
-
+.stroke-footer{
+  background: #4a4a4a;
+}
 .footer{
   display: flex;
   justify-content: center;
   justify-content: space-between;
   clear: both;
   overflow: hidden;
-  background: #4a4a4a;
-  height: 222px;
+  min-height: 225px;
+  padding: 30px 0px 0px 0px;
   .copy-logo{
     .logo-page{
       min-width: 250px;
       display: flex;
       align-items: center;
-      border: 1px solid black;
       justify-content: center;
       img{
         width: 100px;
@@ -582,7 +689,6 @@ section {
       .info-logo{
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
         margin-left:10px;
         .big-name{
           text-transform: uppercase;
@@ -596,7 +702,6 @@ section {
     }
   }
   .info-menu{
-    border: 1px solid black;
     margin-right:50px;
     .footer-info{
       .footer-category{
@@ -613,6 +718,9 @@ section {
               color: white;
               font-size:14px;
               line-height: 25px;
+            }
+            a:hover{
+              border-bottom: 2px solid white;
             }
           }
         }
@@ -632,4 +740,156 @@ section {
     color: white;
     text-transform: uppercase;
   }
+}
+
+
+@media screen and (max-width: 957px){
+  .head-three ul li{
+    margin: 0px 30px 0 50px;
+  }
+}
+
+@media screen and (max-width: 733px){
+  .head-three ul li{
+    margin: 0px 12px 0 35px;
+  }
+}
+
+@media screen and (max-width: 785px){
+  .footer{
+    flex-direction: column;
+    .info-menu{
+      text-align: center;
+      margin-right: 0px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 267px){
+  .footer{
+    .copy-logo{
+      .logo-page{
+        min-width: 0px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 987px) {
+  /*.head-four{
+    .main{
+      .proposal{
+        flex-direction: column;
+      }
+    }
+  }*/
+
+}
+@media screen and (max-width: 1000px) {
+  .head-four{
+    .main{
+      width: 100%;
+      margin: 0px;
+    }
+  }
+  .head-four{
+    flex-direction: column;
+  }
+  .baners{
+    display: flex;
+    justify-content: center;
+    .baner-one{
+      margin: 0px 10px 0px 10px;
+    }
+
+    .baner-two{
+      margin: 0px 10px 0px 10px;
+    }
+    .baner-three{
+      margin: 0px 10px 0px 10px;
+    }
+  }
+  .head-four{
+    .aside{
+      width: 100%;
+    }
+  }
+  .head-four{
+    .main{
+      .proposal{
+        margin-left: 1px;
+      }
+    }
+  }
+  .head-four{
+    .sporting-goods{
+      .dop-div{
+        .amount-products{
+          justify-content: center;
+          .amount-products__product{
+          margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .head-four{
+    .sporting-goods{
+      .dop-div{
+        .news{
+          margin-left:0px;
+          .news-item{
+            margin-left:10px;
+          }
+        }
+        .goods-with-scideas{
+          margin-left:0px;
+          .goods-with-scideas__item{
+            margin-left:10px;
+          }
+        }
+      }
+    }
+  }
+}
+.three-svg-discounts{
+  width: 28px;
+  height: 28px;
+  fill: #7a252b;
+}
+.thumbs_up_alt-svg-discounts{
+  width: 28px;
+  height: 28px;
+  fill: #e4723f;
+}
+.gift-svg-discounts{
+  width: 28px;
+  height: 28px;
+  fill: #84e08f;
+}
+@media screen and (max-width: 525px){
+  .baners{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 717px){
+  .head-four{
+    .main{
+      .proposal{
+        flex-direction: column;
+
+      }
+      .discounts{
+        margin-top:10px;
+      }
+      .stock{
+        margin-top:10px;
+      }
+    }
+  }
+
 }
